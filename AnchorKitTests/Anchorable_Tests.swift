@@ -23,8 +23,8 @@ class Anchorable_Tests: XCTestCase {
 
     #if os(iOS) || os(tvOS)
     var vc: UIViewController!
-    var topLayoutGuide: UILayoutSupport {
-        return vc.topLayoutGuide
+    var topLayoutGuide: UILayoutGuide {
+        return vc.view.safeAreaLayoutGuide
     }
     #endif
 
